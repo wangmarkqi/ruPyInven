@@ -2,24 +2,20 @@
 python extention written by rust for inventory count
 
 # install
- cd project root
- 
- pip install maturin
- 
- maturin build
+## by maturin build to whl
+    cd project root
 
-or
+    pip install maturin
 
-maturin build --interpreter python
+    maturin build or maturin build --interpreter python
 
-or
+## by maturin install to virtual env
 
-maturin develop
-install to virtual env
+    maturin develop
 
-or
 
-cargo build --release
-then change target/release *.dll to *.pyd and import directly.
+## build to dynamic lib, no depending on python version
+    cargo build --release
 
-The wheel file will be generated in the ./target/wheel
+    and change target/release *.dll to *.pyd and import directly.
+
